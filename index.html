@@ -6,7 +6,6 @@
     <title>Análise de Canais Digitais - Sigma Health</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* --- GERAL --- */
         :root {
             --cor-primaria: #005f73;
             --cor-secundaria: #0a9396;
@@ -19,7 +18,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--cor-fundo);
@@ -33,7 +32,6 @@
             padding: 20px;
         }
 
-        /* --- CABEÇALHO --- */
         .header {
             text-align: center;
             padding: 20px;
@@ -41,4 +39,93 @@
             border-radius: 12px;
             margin-bottom: 30px;
             border-left: 5px solid var(--cor-primaria);
-            box-shadow:
+            box-shadow: var(--sombra-card);
+        }
+
+        .header h1 {
+            color: var(--cor-primaria);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            color: #6c757d;
+            font-size: 1.2em;
+            margin: 5px 0 0;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cor-secundaria);
+        }
+        
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--sombra-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .card-header .icon {
+            font-size: 2em;
+            color: var(--cor-secundaria);
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            background-color: var(--cor-fundo);
+            border-radius: 50%;
+        }
+        
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.6em;
+            color: var(--cor-primaria);
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .analysis-column h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .analysis-column .fa-check-circle { color: var(--cor-sucesso); }
+        .analysis-column .fa-lightbulb { color: var(--cor-oportunidade); }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
